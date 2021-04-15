@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Bookstore.Models.sale>
+
+@Styles.Render("~/Content/tablesWithForms")
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<h3>
+    Fill in at least two fields and press search.
+</h3>
+
+<br />
+
+<form action="" class="form-horizontal" method="post">
+
+    <div class="form-group">
+        <label>Store's name</label>
+        <input type="text" class="form-control" id="storeName" name="storeName" />
+    </div>
+
+    <div class="form-group">
+        <label>Start Date</label>
+        <input type="date" class="form-control" id="startDate" name="startDate" />
+    </div>
+
+    <div class="form-group">
+        <label>End Date</label>
+        <input type="date" class="form-control" id="endDate" name="endDate" />
+    </div>
+
+
+    <br />
+    <div class="form-group">
+        <button type="submit" class="btn btn-success">Search</button>
+    </div>
+
+
+</form>
+
+<br />
+@if (TempData["errormsg"] != null)
+{
+    @Html.Raw(TempData["errormsg"])
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ord_num)
+            </th>
+            <th>
+
+                @Html.DisplayNameFor(model => model.store.stor_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.title.title1)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.ord_num)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.store.stor_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.title.title1)
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <br />
+
+}
+

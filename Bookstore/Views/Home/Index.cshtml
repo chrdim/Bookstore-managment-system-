@@ -1,0 +1,201 @@
+﻿@{ 
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>BookStoresCompany</title>
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="~/Content/css/modern-business.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand"@Html.ActionLink( "Home","Index", "Home")</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" @Html.ActionLink( "Stores","Index", "stores")</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="nav-link" @Html.ActionLink( "Sales","Index", "sales")</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  @Html.ActionLink( "Discounts","Index", "discounts")</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Human Resources
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                            <a class="dropdown-item"  @Html.ActionLink( "Authors","Index", "authors")</a>
+                            <a class="dropdown-item"  @Html.ActionLink( "Publishers","Index", "publishers")</a>
+                            <a class="dropdown-item"  @Html.ActionLink( "Employees","Index", "employees")</a>
+                            <a class="dropdown-item"  @Html.ActionLink( "Jobs","Index", "jobs")</a>
+                            
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tools
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                            <a class="dropdown-item" @Html.ActionLink( "Request1","Index", "ContactInfo")</a>
+                            <a class="dropdown-item" @Html.ActionLink( "Request2","Index", "Orders")</a>
+                            
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Other Pages
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPages">
+                            <a class="dropdown-item" @Html.ActionLink("Royscheds ", "Index", "royscheds")</a>
+                            <a class="dropdown-item" @Html.ActionLink("Titleauthors", "Index", "titleauthors")</a>
+                            <a class="dropdown-item" @Html.ActionLink("Pub info", "Index", "pub_info")</a>
+                            <a class="dropdown-item" @Html.ActionLink("Titles", "Index", "titles")</a>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+               
+                <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item active" style="background-image: url(../../Content/imgs/b.jpg)">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Books</h3>
+                        <p>'A room without books is like a body without a soul.'</p>
+                        <p>-Cicero</p>
+                    </div>
+                </div>
+
+                 <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item " style="background-image:  url(../../Content/imgs/a.jpg)">
+                    <div class="carousel-caption d-none d-md-block">
+                        
+                        <h3>Teamwork</h3>
+                        <p>'None of us is as smart as all of us'</p>
+                        <p>-Ken Blanchard</p>
+                    </div>
+                </div>
+                <!-- Slide Three - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url(../../Content/imgs/c.jpg)">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Data managment</h3>
+                        <p>'The world is one big data problem'</p>
+                        <p>-Andrew McAfee</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+    <!-- Page Content -->
+    <div class="container">
+        <h1 class="my-4">Welcome to BookstoreCompany data management system</h1>
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">Search author's contact info with filter</h4>
+                    <div class="card-body">
+                        <p class="card-text">Retrieve the contact details of authors whose books are among X first in sales for a specific period of time.</p>
+                        <p>(Request1)</p>
+                    </div>
+                    <div class="card-footer">
+                        <a  class="btn btn-primary" @Html.ActionLink( "Open page","Index", "ContactInfo")</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">Search orders with filter</h4>
+                    <div class="card-body">
+                        <p class="card-text">Retrieve the Order Id,the store where the order was placed, and the title of the book associated with the corresponding order for the orders placed within a time period.</p>
+                        <p>(Request2)</p>
+                    </div>
+                    <div class="card-footer">
+                        <a  class="btn btn-primary"@Html.ActionLink( "Open page","Index", "Orders")</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">User manual</h4>
+                    <div class="card-body">
+                        <p class="card-text">Τhe user manual contains detailed instructions for each operation of the application.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="~/Content/User Manual.docx" class="btn btn-primary">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Features Section -->
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>BookstoreCompany database</h2>
+                <p>
+                    Through the application you can fully manage the database. Add, remove and edit data in all tables, through simple and easy-to-use forms:
+                </p>
+                <p>For each table there are the following forms:</p>
+                <ul>
+                    <li>Index</li>
+                    <li>Edit</li>
+                    <li>Create</li>
+                    <li>Delete</li>
+                    <li>Details</li>
+                </ul>
+               
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid rounded" src="~/Content/imgs/logo.png" alt="">
+            </div>
+        </div>
+        <!-- /.row -->
+        <hr>
+        <!-- Call to Action Section -->
+        
+    </div>
+    <!-- /.container -->
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; BookstoreCompany</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/Content/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+﻿
+@model IEnumerable<Bookstore.Models.author>
+
+@Styles.Render("~/Content/tablesWithForms")
+
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<h3>
+    Fill at least two fields and press search.
+</h3>
+
+<br />
+
+
+
+
+
+<form action="" name="form " class="form-horizontal" method="post">
+
+    <div class="form-group">
+        <label>Number X</label>
+        <input type="number" class="form-control" id="num" name="numberX" min="1" />
+    </div>
+
+    <div class="form-group">
+        <label>Start Date</label>
+        <input type="date" class="form-control" id="startDate" name="startDate" />
+    </div>
+
+    <div class="form-group">
+        <label>End Date</label>
+        <input type="date" class="form-control" id="endDate" name="endDate" />
+    </div>
+
+    <br />
+    <div class="form-group">
+        <button type="submit" class="btn btn-success">Search</button>
+    </div>
+
+
+</form>
+
+<br />
+@if (TempData["errormsg"] != null)
+{
+    @Html.Raw(TempData["errormsg"])
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.au_lname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.au_fname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.city)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.state)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.zip)
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.au_lname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.au_fname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.city)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.state)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.zip)
+                </td>
+
+            </tr>
+        }
+    </table>
+
+    <br />
+} 
